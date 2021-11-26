@@ -1,0 +1,88 @@
+01 - Fonctionality - 8 tests
+
+    Test 01: KO
+
+      Test failure: The output must match the regular expression '^\[rush1-3\] 1 1 \|\| \[rush1-4\] 1 1 \|\| \[rush1-5\] 1 1
+
+$', but it was '[rush1-3] || [rush1-4] || [rush1-5] 1 1
+
+'
+
+    Test 02: OK
+
+      PASSED
+
+    Test 03: OK
+
+      PASSED
+
+    Test 04: KO
+
+      Test failure: The output must match the regular expression '^\[rush1-3\] 1 4 \|\| \[rush1-4\] 1 4 \|\| \[rush1-5\] 1 4
+
+$', but it was '[rush1-3] || [rush1-4] || [rush1-5] 1 4
+
+'
+
+    Test 05: KO
+
+      Test failure: The output must match the regular expression '^\[rush1-3\] 4 1 \|\| \[rush1-4\] 4 1 \|\| \[rush1-5\] 4 1
+
+$', but it was '[rush1-3] || [rush1-4] || [rush1-5] 4 1
+
+'
+
+    Test 06: OK
+
+      PASSED
+
+    Test 07: OK
+
+      PASSED
+
+    Test 08: KO
+
+      Test failure: The output must match the regular expression '^\[rush1-2\] 1 90
+
+$', but it was '4 90
+
+'
+ 
+
+  02 - Error handling - 5 tests
+
+    Test 01: Crashed
+
+      Crashed - exit status 139
+
+    Test 02: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '1 1
+
+'
+
+    Test 03: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '[rush1-3] || [rush1-4] || [rush1-5] 1 1
+
+'
+
+    Test 04: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '5 5
+
+'
+
+    Test 05: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '[rush1-5] 4 6
+
+'

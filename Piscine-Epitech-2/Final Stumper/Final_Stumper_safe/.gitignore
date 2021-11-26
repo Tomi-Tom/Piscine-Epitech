@@ -1,0 +1,10 @@
+*.o
+*.swp
+*~
+*.gcda
+*.gcno
+unit_test
+rush3
+libmy.a
+lib/libmy.a
+lib/my/libmy.a

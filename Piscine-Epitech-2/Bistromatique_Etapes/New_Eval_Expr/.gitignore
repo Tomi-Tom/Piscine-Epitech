@@ -1,0 +1,11 @@
+*.o
+*.gcda
+*.gcno
+unit_test
+infin_add
+*.swp
+*.a
+*~
+#*#
+eval_expr
+.vscode/

@@ -1,0 +1,203 @@
+B-CPE-101 Final Stumper
+
+
+
+
+
+Basic tests
+
+
+
+  01 - Fonctionality - 8 tests
+
+    Test 01: OK
+
+      PASSED
+
+    Test 02: OK
+
+      PASSED
+
+    Test 03: OK
+
+      PASSED
+
+    Test 04: OK
+
+      PASSED
+
+    Test 05: OK
+
+      PASSED
+
+    Test 06: OK
+
+      PASSED
+
+    Test 07: OK
+
+      PASSED
+
+    Test 08: OK
+
+      PASSED
+
+  
+
+  02 - Error handling - 5 tests
+
+    Test 01: Crashed
+
+      Crashed - exit status 139
+
+    Test 02: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '1 1
+
+'
+
+    Test 03: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '[rush1-3] 1 1 || [rush1-4] 1 1 || [rush1-5] 1 1
+
+'
+
+    Test 04: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '5 5
+
+'
+
+    Test 05: KO
+
+      Test failure: The output must match the regular expression '^none
+
+$', but it was '[rush1-5] 4 6
+
+'
+
+  
+
+
+
+
+
+=== BUILD LOG ===
+
+
+
+make: Entering directory '/usr/local/bugs/delivery'
+
+make re -C lib/my/
+
+make[1]: Entering directory '/usr/local/bugs/delivery/lib/my'
+
++------------------+
+
+|    CLEAN HERE    |
+
++------------------+
+
+rm -f *.o
+
+rm -f libmy.a
+
++------------------+
+
+|    FCLEAN HERE   |
+
++------------------+
+
+rm -f libmy.a
+
+rm -f ../libmy.a
+
+rm -f ../../include/my.h
+
+---------------------
+
+         END
+
+---------------------
+
++-----------------+
+
+|  COMPLILE HERE  |
+
++-----------------+
+
+gcc -Wall -Wextra -Werror -c *.c
+
+ar rc libmy.a *.o
+
+---------------------
+
+         END
+
+---------------------
+
+make[1]: Leaving directory '/usr/local/bugs/delivery/lib/my'
+
+gcc -Wall -Wextra -Werror -o rush3 main.c rush3.c find_type.c find_size.c  -I include/ -L lib/ -lmy
+
+make: Leaving directory '/usr/local/bugs/delivery'
+
+Build status: OK
+
+
+
+
+
+=== CODING STYLE ===
+
+
+
+F4 rule has been violated 3 times: too long function
+
+L4 rule has been violated 7 times: misplaced curly brackets
+
+G4 rule has been violated 1 times: global variables should be avoided
+
+G3 rule has been violated 10 times: bad indentation of preprocessor directive
+
+L3 rule has been violated 1 times: misplaced space(s)
+
+L2 rule has been violated 3 times: bad indentation at the start of a line
+
+A3 rule has been violated 2 times: file should end with a line break (\\n)
+
+
+
+
+
+------------------------------------------------------------------------------
+
+                           GCC Code Coverage Report
+
+Directory: .
+
+------------------------------------------------------------------------------
+
+File                                       Lines    Exec  Cover   Missing
+
+------------------------------------------------------------------------------
+
+find_size.c                                   26      26   100%   
+
+find_type.c                                   42      41    97%   64
+
+------------------------------------------------------------------------------
+
+TOTAL                                         68      67    98%
+
+------------------------------------------------------------------------------
+
+lines: 98.5% (67 out of 68)
+
+branches: 91.7% (33 out of 36)

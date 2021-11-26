@@ -1,0 +1,7 @@
+*.o
+*.gcda
+*.gcno
+unit_test
+infin_add
+*.swp
+*.a
