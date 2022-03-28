@@ -1,4 +1,0 @@
-*.o
-include/my.h
-lib/libmy.a
-lib/my/libmy.a

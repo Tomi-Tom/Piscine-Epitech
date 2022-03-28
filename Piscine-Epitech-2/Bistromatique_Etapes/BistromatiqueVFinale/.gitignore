@@ -1,5 +1,0 @@
-lib/my/libmy.a
-calc
-*.gcda
-*.gcno
-unit_tests
